@@ -1,0 +1,50 @@
+.main-title {
+    color: red;
+}
+.nav-list li:nth-child(1) a{
+    color: green;
+}
+.link_special-link {
+    color: blue;
+}
+.nav-list li:nth-child(3) a{
+    color: yellow;
+}
+#first-post h2{
+    color: orange;
+}
+#first-post p{
+    color: orange;
+}
+.post h2{
+    color: purple;
+}
+.post p{
+    color: purple;
+}
+.widget h3 {
+    color: pink;
+}
+.color-list li {
+    color: gray;
+}
+.color-list li:nth-child(2) {
+    color: brown;
+}
+.color-list li:nth-child(3) {
+    color: black;
+}
+.widget.important-widget h3{
+    color:maroon;
+}
+.note
+{
+    color: maroon;
+}
+.form input{
+    color:white;
+}
+.submit-btn{
+    background-color: black;
+    color: white;
+}
