@@ -1,156 +1,57 @@
-<html>
-    <head>
-        <title>My own page</title>
-        <style>
-        body{
-            background-color: rgb(255, 255, 255);
-            margin: 0;
-        }
-        header{
-            display: flex;
-            align-items: center; /*выравнивание объектов по центру*/
-            background-color: #ffcf6f;
-        }
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа: Селекторы CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="main-title">Красный</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#" class="link">Зеленый</a></li>
+                <li><a href="#" class="link_special-link">Синий</a></li>
+                <li><a href="#" class="link">Желтый</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="content">
+        <article class="post" id="first-post">
+            <h2>Пост 1: Оранжевый</h2>
+            <p>Этот блок текста должен стать оранжевым.</p>
+        </article>
+        
+        <article class="post">
+            <h2>Пост 2: Фиолетовый</h2>
+            <p>Этот блок текста должен стать фиолетовым.</p>
+        </article>
+    </section>
 
-        span{
-            font-size: 28px;
-            margin: 20px;
-        }
-        h1{
-            text-align: center;
-        }
-        h2{
-            text-align: center;
-            border: 2px;
-            margin: 0;
-            background-color: #fffb00;
-        }
-        h3{
-            margin: 0;
-            padding-left: 10px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
-        nav{
-            background-color: #ffcf6f;
-        }
-        li{
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            font-size: 18px;
-            line-height: 1.7; 
-        }
-        p{
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 18px;
-            line-height: 1.7; 
-        }
-        .image_position{
-        position: absolute; 
-        top: 200px; 
-        left: 110px; 
-        }
-        .own_inf {
-            background-color: #a9fdef; 
-            height: 800px; 
-            top: 0; 
-            left: 0; 
-            right: 0; 
-        }
-        figcaption{
-            text-align: center;
-            margin-top: 5px;
-            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            font-size: 18px;
-        }
-        .football {
-            background-color: #ffcf6f; 
-            height: 500px; 
-            bottom: 0; 
-            left: 0; 
-            right: 0; 
-        }
-        .nature{
-            background-color: rgb(179, 255, 0); 
-            height: 700px; 
-            bottom: 0;
-            left: 0; 
-            right: 0; 
-        }
-        .travelling{
-            background-color: rgb(0, 255, 221); 
-            height: 700px; 
-            bottom: 0; 
-            left: 0; 
-            right: 0; 
-        }
-        .absolute-list {
-            position: absolute;
-            margin-right: 40px;
-            top: 200px; 
-            left: 650px; 
-        }
-        </style>
-    </head>
-        <body>
-            <header>
-                <img src="icon.png" style="width: 50px;height: 50px;margin-left: 20px;">
-                <span><em>Сайт персональных страниц</em></span>
-                    <nav style="margin-left: 900px;">
-                        <a href="#">О себе</a> |
-                        <a href="#">Мои хобби</a>
-                    </nav>
-            </header>
-            <div class="own_inf">
-                <h2><em>О себе</em></h2>
-                <div class="image_position"><img src="First_photo.jpg" width="400px" height="400px"><figcaption><em>Левковец Евгений Петрович</em></figcaption></div>
-                <div class="absolute-list">
-                    <ul>
-                        <li>Родился 9 сентября 2004 года в городе Жлобин</li>
-                        <li>Окончил среднюю школу №12 г. Жлобина с отличием. За период обучения с 7 класса участовал в олимпиадах по географии, в 8 классе посчастливилось выйти на областной этап. С 10 класса постоянно участвовал в концертах с вокальными номерами</li>
-                        <li>В детской школе искусств №2 проходил обучение по игре на баяне и по народному пению в ансамбле "Лявониха". В течение 7 лет обучения поучаствовал во множестве различных музыкальных конкурсов, получив в сумме 5 дипломов 3 степени. Главная награда - 3 место в междунарожном конкурсе "Зоркі Прыдняпроўя"</li>
-                        <li>На данный момент получаю образование в Академии управления при Президенте Республики Беларусь по специальности "Управление информационными ресурсами", а также на военном факультете БГУ по специльности "Морально-психологическое обеспечение боевой и повседневной деятельности войск"</li>
-                    </ul>
-                </div>
-            </div>
-            <h2><em>Мои хобби</em></h2>
-            <div class="football">
-                <h3>Просмотр футбольных матчей</h3>
-                <hr>
-                <img src="FC_Barcelona.svg.png" style="width:200px; height:200px;position: relative;left: 950px;">
-                <img src="BarcaTeam.webp" style="width:400px; height:200px;position: relative;top: 225px;left: 400px;">
-                <img src="BarcaPSG.jpg" style="width:400px; height:200px;position: relative;top: 225px;left: 500px;">
-                <p style="width: 500px; position: relative;top: -200px;background-color: white;margin-left: 10px;padding: 5px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Все началось со времен ЕВРО 2016, когда я увидел по телевизору групповой матч сборной Франции и начал смотреть каждый их матч вплоть до финала. Запоминающееся впечатление оставила игра Димитри Пайе, который стал 2 бомбардиром сборной Франции в данном турнире.
-                    Просмотрами матчей ЕВРО я не ограничился. Знаменательным матчем, который преопределил мою футбольную любовь к клубу, стал Эль Классико в декабре 2017, когда Барселона в сухую выиграла Реал Мадрид со счетом 3:0.
-                    Прекрасные и удивительные комбинации в короткий пас игроков Барселоны (Месси, Альбы, Суареза) предопределили стиль игры, который мне нравится.</p>
-               
-            </div>
-            <div class="nature">
-                <h3>Отдых на природе</h3>
-                <hr>
-                <img src="grribman.jpg" style="width:170px; height:200px;position: relative;top: 0px;left: 90px;">
-                <img src="grib1.jpg" style="width:350px; height:200px;position: relative;top: 210px;left: -160px;">
-                <img src="grib2.jpg" style="width:350px; height:200px;position: relative;top: 420px;left: -513px;">
-                <img src="sunrise.jpg" style="width:350px; height:200px;position: relative;top: 0px;left: -500px;">
-                <img src="malush.jpg" style="width:350px; height:200px;position: relative;top: -205px;left: 800px;">
-                <img src="fireman.jpg" style="width:170px; height:200px;position: relative;top: -205px;left: 920px;">
-                <img src="fire.jpg" style="width:350px; height:200px;position: relative;top: 0px;left: 650px;">
-                <img src="river.jpg" style="width:350px; height:200px;position: relative;top: 215px;left: -500px;">
-                <img src="malush1.jpg" style="width:350px; height:200px;position: relative;top: 13px;left: 800px;">
-                <img src="shahluk.jpg" style="width:350px; height:200px;position: relative;top: 13px;left: 824px;">
-                <p style="width: 755px; height: 130px; position: relative;top: -390px;left: 375px;background-color: white;margin-left: 10px;padding: 5px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
-                    Поход в лес за грибами и ягодами является хорошим средством для внутреннего успокоения. Рыбалка – отличная возможность испытать удовольствие от ловли большой рыбы и провести время на природе, наслаждаясь тишиной и красотой окружающего мира. 
-                    Обе эти активности помогают мне восстановить силы и обрести душевное равновесие.
-                </p>
-            </div>
-            <div class="travelling">
-                <h3>Путешествия</h3>
-                <hr>
-                <img src="Mogilev.jpg" style="width:400px; height:250px;position: relative; left: 150px;">
-                <img src="Grodno.jpg" style="width:300px; height: 300px;;position:relative; left: -370px; top: 320px;">
-                <img src="Brest.jpg" style="width:300px; height:300px;position: relative; left: -300px;top: 320px">
-                <p style="width: 600px; height: 120px; position: relative;top:  -140;left: 820px;background-color: white;margin-left: 10px;padding: 5px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
-                    Туристические поездки в новые места Беларуси оставляют незабываемые впечатления от прогулки по местам с красивыми природными пейзажами, просмотра архитектурных достопримечательностей и посещением уютных кафе и ресторанов.
-                </p>
-            </div>
-        </body>
+    <section class="sidebar">
+        <div class="widget">
+            <h3>Розовый</h3>
+            <ul class="color-list">
+                <li>Цвет: Серый</li>
+                <li>Цвет: Коричневый</li>
+                <li class="highlighted">Цвет: Черный</li>
+            </ul>
+        </div>
+
+        <div class="widget important-widget">
+            <h3>Бордовый</h3>
+            <p class="note">Этот текст должен стать бордовым.</p>
+        </div>
+    </section>
+
+    <footer>
+        <form action="#" class="form">
+            <label for="name">Введите имя:</label>
+            <input type="text" id="name" placeholder="Белый">
+            <button type="submit" class="submit-btn">Черный</button>
+        </form>
+    </footer>
+</body>
 </html>
