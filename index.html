@@ -1,57 +1,176 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лабораторная работа: Селекторы CSS</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1 class="main-title">Красный</h1>
-        <nav>
-            <ul class="nav-list">
-                <li><a href="#" class="link">Зеленый</a></li>
-                <li><a href="#" class="link_special-link">Синий</a></li>
-                <li><a href="#" class="link">Желтый</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section class="content">
-        <article class="post" id="first-post">
-            <h2>Пост 1: Оранжевый</h2>
-            <p>Этот блок текста должен стать оранжевым.</p>
-        </article>
-        
-        <article class="post">
-            <h2>Пост 2: Фиолетовый</h2>
-            <p>Этот блок текста должен стать фиолетовым.</p>
-        </article>
-    </section>
-
-    <section class="sidebar">
-        <div class="widget">
-            <h3>Розовый</h3>
-            <ul class="color-list">
-                <li>Цвет: Серый</li>
-                <li>Цвет: Коричневый</li>
-                <li class="highlighted">Цвет: Черный</li>
-            </ul>
+    <head>
+        <meta charset="UTF-8">
+        <title>Селекторы CSS: сайт-визитка</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="page">
+            <header class="header">
+                <div class="container header__container">
+                    <!--Бургер-меню-->
+                    <button class="header__burger-btn" id="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <a href="#" class="logo">
+                        <img class="logo__img" alt="SiteSync Solutions">
+                    </a>
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__item"><a href="" class="menu__link" id="Glavnaja">Главная</a></li>
+                            <li class="menu__item"><a href="" class="menu__link" id="Achievements">Мои достижения</a></li>
+                            <li class="menu__item"><a href="" class="menu__link" id="Technologies">Освоенные технологии</a></li>
+                            <li class="menu__item"><a class="menu__link" id="review" href="">Написать отзыв</a></li>
+                            <li class="menu__item"><a class="menu__link" id="contacts" href="">Контакты</a></li>
+                            <li class="menu__item"><a class="menu__link" href=""><button id="application">Оставить заявку</button></a></li>
+                        </ul>  
+                    </nav>
+                </div>
+            </header>
+            <div class="first-section section">
+                <div class="first-section__first-part">
+                    <div class="title">Евгений</div>
+                    <div class="subtitle">Web-developer</div>
+                    <div class="article">Привет! Я - веб-разработчик из Минска. Cпециализируюсь на создании современных и интерактивных веб-сайтов, используя передовые технологии и инструменты.</div>
+                </div>
+                <div class="first-section__second-part">
+                    <img src="Evgeny.png">
+                </div>
+            </div>
+            <div class="second-section-title">Мои достижения</div>
+            <div class="second-section section">
+                <div class="second-section__row">
+                    <div class="second-section__column">
+                        <div class="second-section__item item-second-section">
+                            <div class="item-second-section__image">
+                                <img src="uxui.png" style="width:400px;height:300px;border-radius: 15px;">
+                            </div>
+                            <div class="item-second-section__body">
+                                <div class="item-second-section__title">Разработка пользовательских интерфейсов</div>
+                                <div class="item-second-section__text">Спроектировал и внедрил новый интерфейс для онлайн-сервиса бронирования, что привело к увеличению времени, проведенного пользователями на сайте, на 25%</div>
+                                <button class="item-second-section__button">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="second-section__column">
+                        <div class="second-section__item item-second-section">
+                            <div class="item-second-section__image">
+                                <img src="web-site-optimisation.jpg" style="width:400px;height:300px;border-radius: 15px;">
+                            </div>
+                            <div class="item-second-section__body">
+                                <div class="item-second-section__title">Оптимизация производительности веб-сайтов</div>
+                                <div class="item-second-section__text">Улучшил время загрузки сайта на 50% за счет внедрения современных методов оптимизации, таких как ленивая загрузка изображений, минификация CSS и JavaScript</div>
+                                <button class="item-second-section__button">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="second-section__column">
+                        <div class="second-section__item item-second-section">
+                            <div class="item-second-section__image">
+                                <img src="api-integration.webp" style="width:400px;height:300px;border-radius: 15px;">
+                            </div>
+                            <div class="item-second-section__body">
+                                <div class="item-second-section__title">Интеграция с внешними сервисами и API</div>
+                                <div class="item-second-section__text">Успешно интегрировал сайт с несколькими внешними сервисами и API, такими как платежные системы</div>
+                                <button class="item-second-section__button">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+            <div class="third-section-title">Освоенные технолологии</div>
+            <div class="third-grid-container">
+                    <div class="block_grid-1">
+                    <div class="grid-image"><img src="htmlcss.jpg" style="width:600px;height:300px;border-radius: 10px;"></div>
+                    <div class="grid-container__body">
+                        <div class="grid-container__title">HTML и CSS</div>
+                        <div class="grid-container__text">Навыки данных технологий позовляют реализовывать адаптивный дизайн, интегрировать современные стили и обеспечить оптимальную работу сайтов</div>
+                    </div>
+                    </div>
+                    <div class="block_grid-1">
+                    <div class="grid-image"><img src="javascript.png" style="width:600px;height:300px;border-radius: 10px;"></div>
+                    <div class="grid-container__body">
+                        <div class="grid-container__title">JavaScript</div>
+                        <div class="grid-container__text">С помощью данного инструмента могу создавать динамичные и интерактивные веб-приложения, управлять DOM, работать с API и асинхронными запросами</div>
+                    </div>
+                    </div>
+                    <div class="block_grid-1">
+                    <div class="grid-image"><img src="git.png" style="width:600px;height:300px;border-radius: 10px;"></div>
+                    <div class="grid-container__body">
+                        <div class="grid-container__title">Системы контроля версий</div>
+                        <div class="grid-container__text">Позволяет управлять изменениями кода, сотрудничать с командами разработчиков, работать с ветвлениями и объединениями, а также использовать платформы, такие как GitHub и GitLab, для организации проектов и обеспечения стабильности кода.</div>
+                    </div>
+                    </div>
+                    <div class="block_grid-1">
+                    <div class="grid-image"><img src="figma.png" style="width:600px;height:300px;border-radius: 10px;"></div>
+                    <div class="grid-container__body">
+                        <div class="grid-container__title">Figma</div>
+                        <div class="grid-container__text">Владение данным инструментом дает мне возможность внедрять современные принципы UI/UX дизайна</div>
+                    </div>
+                    </div>
+                    <div class="block_grid-1">
+                    <div class="grid-image"><img src="react.png" style="width:600px;height:300px;border-radius: 10px;"></div>
+                    <div class="grid-container__body">
+                        <div class="grid-container__title">Фреймворки и библиотеки JavaScript</div>
+                        <div class="grid-container__text">Имею обширный опыт работы с React. Умею организовывать проектную структуру, работать с компонентным подходом, управлять состоянием приложений и интегрировать сторонние библиотеки для расширения функциональности</div>
+                    </div>
+                    </div>
+                    <div class="block_grid-1">
+                    <div class="grid-image"><img src="instruments.png" style="width:600px;height:300px;border-radius: 10px;"></div>
+                    <div class="grid-container__body">
+                        <div class="grid-container__title">Инструменты сборки и управления зависимостями</div>
+                        <div class="grid-container__text">Инструменты сборки и управления зависимостями мой опыт использования
+                            Мой опыт использования инструментов сборки и управления зависимостями, таких как Webpack, Babel, npm и Yarn, позволяет мне эффективно организовывать и автоматизировать процессы сборки проекта, транспиляции кода и управления библиотеками</div>
+                    </div>
+                    </div>
+                    </div>
+            <div class="form-container">
+                <h1 style="color:white;padding-top:100px;font-size: 45px;">Форма для заяки</h1>
+                <p style="color:white;font-size: 25px;">Введите необходимые данные, чтобы я мог с вами связаться</p>
+                <input type="text" placeholder="Имя">
+                <input type="email" placeholder="Email">
+                <input type="text" placeholder="Номер телефона">
+                <button type="submit"style="color:white;padding-botton:100px">Отправить</button>
+            </div>
+            <div class="fourth-section">
+                <div class="fourth-section__first-part">
+                    <img src="programming.jpg " style="width:1500px;height:1000px;">
+                </div>
+                <div class="fourth-section__second-part">
+                    <div class="fourth-section__second-part__subtitle">
+                        Я всегда стремлюсь улучшать качество моих услуг и ценю ваше мнение. Оставьте, пожалуйста, отзыв о вашем опыте использования веб-сайта. Ваши комментарии помогают мне стать лучше.
+                    </div>
+                    <form action="https://getform.io/f/awnnepjb" method="POST" enctype="multipart/form-data">
+                        <div class="fourth-section-textbox_name">
+                        <input type="text" placeholder="Имя" id="name" name="name" required>
+                        </div>
+                        <div class="fourth-section-textbox-feedback">
+                        <textarea name="textarea" placeholder="Обратная связь" id="feedback"></textarea>
+                        </div>
+                        <div class="fourth-section-textbox-button">
+                        <button type="submit" id="submit-button">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="fifth-section">
+                <div class="fifth-section">
+                    <div class="fifth-section__title">Мои контакты</div>
+                    <div class="fifth-section__number">+375 (44) 444 44 44</div>
+                    <div class="fifth-section__mail">levkovets.work@gmail.com</div>
+                    <div class="fifth-section__networks">Мои социальные сети</div>
+                    <div class="fifth-section__link">
+                        <a href="https://web.telegram.org/" target="_blank"><img src="telegram.png" alt="Telegram" style="width:50px;height:50px"></a>
+                        <a href="https://www.instagram.com/" target="_blank"><img src="instagram.png" alt="Instagram" style="width:50px;height:50px"></a>
+                        <a href="https://vk.com/" target="_blank"><img src="vk.png" alt="VK" style="width:50px;height:50px"></a>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="widget important-widget">
-            <h3>Бордовый</h3>
-            <p class="note">Этот текст должен стать бордовым.</p>
-        </div>
-    </section>
-
-    <footer>
-        <form action="#" class="form">
-            <label for="name">Введите имя:</label>
-            <input type="text" id="name" placeholder="Белый">
-            <button type="submit" class="submit-btn">Черный</button>
-        </form>
-    </footer>
-</body>
+    </body>
 </html>
